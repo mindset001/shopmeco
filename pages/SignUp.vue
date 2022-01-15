@@ -1,5 +1,6 @@
 <template>
-         <v-container >
+       <div>
+          <v-container >
         <v-layout row wrap >
 
          <v-flex md6> 
@@ -147,7 +148,10 @@
         
             
         </v-layout>
+        
     </v-container>
+    <Footer/>
+       </div>
 
 </template>
 

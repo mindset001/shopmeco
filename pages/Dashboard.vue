@@ -5,6 +5,8 @@
       permanent
       left
       dark
+      :mini-variant="mini"
+    
     >
       <template v-slot:prepend>
         <v-list-item two-line>
@@ -15,18 +17,29 @@
           <v-list-item-content>
             <v-list-item-title>Jane Smith</v-list-item-title>
             <v-list-item-subtitle>Logged In</v-list-item-subtitle>
+            
+
           </v-list-item-content>
+          
         </v-list-item>
+        <v-btn
+          icon
+          @click.stop="mini = !mini"
+        >
+          <v-icon>mdi-chevron-left</v-icon>
+        </v-btn>
+        
       </template>
 
       <v-divider></v-divider>
 
-      <v-list dense>
+      <v-list dense class="pt-16">
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          :to="item.title"
+          :to="item.link"
           nuxt
+          exact
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -38,9 +51,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-     <div>
      <nuxt-child />
-     </div>
   </v-card>
 
 
@@ -52,10 +63,14 @@
     data () {
       return {
         items: [
-          { title: 'Profile', icon: 'mdi-home-city' },
-          { title: 'Request service', icon: 'mdi-account' },
-          { title: 'Support', icon: 'mdi-account-group-outline' },
+          // { title: '', icon: '', link: ''},
+          { title: 'Profile', icon: 'mdi-home-city', link: '/Dashboard' },
+          { title: 'Request service', icon: 'mdi-account', link: '/Dashboard/Request service'},
+          { title: 'Support', icon: 'mdi-account-group-outline',link: '/Dashboard/Support' },
+
         ],
+         mini: true,
+        
       }
     },
   }

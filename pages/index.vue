@@ -5,6 +5,7 @@
 <About/>
 <Services/>
 <Form/>
+<Footer/>
 </div>
 </template>
 

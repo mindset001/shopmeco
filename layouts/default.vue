@@ -83,7 +83,7 @@
        
     </v-main>
 
-        <Footer/>
+        
      <v-footer
     color="grey lighten-1"
     padless
