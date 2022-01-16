@@ -17,7 +17,7 @@
 
 
 
-       <v-form v-model="valid" class="mt-16 mb-10" ref="shakur">
+       <v-form v-model="valid" class="mt-16 mb-10" ref="shakur" >
     <v-container>
       <v-row>
         <v-col
@@ -196,13 +196,33 @@
             if(this.password == this.confirmPassword){
                 let validate =   this.$refs.shakur.validate()
           if(validate){
-              console.log('anything')
+              const data = {
+                fullname: this.fullname,
+            phonenumber: this.phone,
+            companyname: this.companyName,
+            address: this.address,
+            service: this.select,
+            password: this.password,
+            email: this.email,
+          }
+          this.$axios.post('https://shopmeco-server.herokuapp.com/api/user/signup', data).then(res => console.log(res))
           }
             }else{
              this.confirmPasswordRules == 'password does not match'
           }
           
         },
+        // Handlesubmit(){
+        //   const data = {
+        //     phonenumber: this.phone,
+        //     companyname: this.companyName,
+        //     address: this.address,
+        //     service: this.services,
+        //     password: this.password,
+        //     email: this.email,
+        //   }
+        //   this.$axios.post('http://shopmeco-server.herokuapp.com/', data).then(res => console.log(res))
+        // }
         
 
     }
