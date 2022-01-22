@@ -13,7 +13,7 @@
             </p>
              <div class="mt-10">
         <v-btn to="/signup" nuxt dark color="red" ><VIcon>mdi-sign-up</VIcon>
-        get started</v-btn>
+        Partner Now</v-btn>
             
             <v-btn color="success">
             <VIcon>mdi-connectwithoutcontact</VIcon>

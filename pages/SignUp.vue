@@ -110,36 +110,7 @@
       </v-row>
     </v-container>
 
-    <v-container>
-      <v-row>
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <v-text-field
-            v-model="password"
-            :rules="passwordRules"
-            label="Password"
-            required
-          ></v-text-field>
-        </v-col>
-
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <v-text-field
-            v-model="confirmPassword"
-            :rules="passwordRules"
-            label="Confirm Password"
-            :error-messages="confirmPasswordRules"
-            required
-          ></v-text-field>
-        </v-col>
-
-        
-      </v-row>
-    </v-container>
+    
 
 
   </v-form>
@@ -158,6 +129,9 @@
 
 <script>
   export default {
+
+   
+
     data: () => ({
       valid: false,
       select: null,

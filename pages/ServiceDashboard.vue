@@ -15,7 +15,7 @@
           </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title>{{detail.fullname}}</v-list-item-title>
+            <v-list-item-title>Jane Smith</v-list-item-title>
             <v-list-item-subtitle>Logged In</v-list-item-subtitle>
             
 
@@ -60,19 +60,16 @@
 
 <script>
   export default {
-    middleware: 'user',
     data () {
-      
       return {
         items: [
           // { title: '', icon: '', link: ''},
-          { title: 'Profile', icon: 'mdi-home-city', link: '/Dashboard' },
+          { title: 'Profile', icon: 'mdi-home-city', link: '/ServiceDashboard' },
           { title: 'Request service', icon: 'mdi-account', link: '/Dashboard/Request service'},
           { title: 'Support', icon: 'mdi-account-group-outline',link: '/Dashboard/Support' },
 
         ],
          mini: true,
-         detail: JSON.parse(localStorage.getItem('detail'))
         
       }
     },

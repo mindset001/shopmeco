@@ -130,6 +130,9 @@
 
 <script>
   export default {
+     middleware: 'auth',
+
+     
     data: () => ({
       valid: false,
       select: null,
@@ -156,9 +159,7 @@
       confirmPasswordRules:  '',
 
       phone: '',
-      companyName: '',
       address: '',
-      services: '',
       password: '',
       confirmPassword: '',
     }),
@@ -168,7 +169,19 @@
             if(this.password == this.confirmPassword){
                 let validate =   this.$refs.shakur.validate()
           if(validate){
-              console.log('anything')
+              const data = {
+                fullname: this.fullname,
+            phonenumber: this.phone,
+            address: this.address,
+            password: this.password,
+            email: this.email,
+          }
+          this.$axios.post('https://shopmeco-server.herokuapp.com/api/user/signup', data).then(res => {
+            
+            const token = res.data
+             localStorage.setItem('token', JSON.stringify(token))
+             this.$router.push('/Dashboard')
+          })
           }
             }else{
              this.confirmPasswordRules == 'password does not match'

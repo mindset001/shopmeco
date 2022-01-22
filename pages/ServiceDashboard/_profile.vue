@@ -1,6 +1,6 @@
 <template>
-    <v-card  width="100vw" class=" " >
-        <v-layout row wrap justify-space-around align-center>
+    <v-card  width="100vw" class=" py-4" >
+        <v-layout row wrap justify-space-around>
             <v-flex md6>
                 <v-container grid-list-xs>
                     <v-card class="py-10 px-6">
@@ -31,7 +31,7 @@
           md="6"
         >
           <h3>Fullname</h3>
-          <p>{{detail.fullname}}</p>
+          <p>Moshood Shittu</p>
         </v-col>
 
         <v-col
@@ -39,7 +39,7 @@
           md="6"
         >
           <h3>E-mail Address</h3>
-          <p>{{detail.email}}</p>
+          <p>smademola@gmail.com</p>
         </v-col>
 
         
@@ -53,25 +53,46 @@
           md="6"
         >
           <h3>Phone Number</h3>
-          <p>{{detail.phonenumber}}</p>
+          <p>+234-8160-0712-43</p>
         </v-col>
 
-          <v-col
+        <v-col
           cols="12"
           md="6"
         >
-         <h3>Address</h3>
-          <p>{{detail.address}}</p>
+         <h3>Company Name</h3>
+          <p>Shopmeco International</p>
         </v-col>
 
         
       </v-row>
     </v-container>
 
-      <v-btn color="success" class="text-center" to="/signup" nuxt>Become A Service provider</v-btn>
+    <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          md="6"
+        >
+         <h3>Address</h3>
+          <p>3rd Floor, Landmark Tower,Moti Vihar,Ashok Marg,
+South City 1, Sector 41, HAryana 122001</p>
+        </v-col>
+
+        <v-col
+          cols="12"
+          md="6"
+        >
+         <h3>Service Rendering</h3>
+          <p>Car Wash</p>
+        </v-col>
+
+        
+      </v-row>
+    </v-container>
 
    
-                        
+                 <v-btn color="success" to="/dashboard">Become A User</v-btn>       
                         
                     </v-card>
                 </v-container>
@@ -82,7 +103,7 @@
                    
             <v-flex md5>
                 <v-container grid-list-xs>
-                    <v-layout column wrap justify-center class="mt-2">
+                    <v-layout column wrap >
                       <v-flex md6 >
                       <v-card class=" py-6">
                         <h1 class="text-center">Service in Use</h1>
@@ -135,7 +156,7 @@ South City 1, Sector 41, HAryana 122001</p>
           cols="12"
           md="6"
         >
-         <v-btn color="success">Make Payment</v-btn>
+         <v-btn color="success">Confirm Payment</v-btn>
         </v-col>
 
         <v-col
@@ -154,7 +175,7 @@ South City 1, Sector 41, HAryana 122001</p>
                       </v-flex>
                       <v-flex md6>
                       <v-card class="mt-5">
-                        <h1 class="text-center">Services used</h1>
+                        <h1 class="text-center">Previous Clients</h1>
                          <v-container class="pl-16">
       <v-row>
         <v-col
@@ -209,11 +230,6 @@ South City 1, Sector 41, HAryana 122001</p>
 </template>
 <script>
   export default {
-    data() {
-      return{
-         detail: JSON.parse(localStorage.getItem('detail'))
-      }
-    }
     
   }
 </script>
