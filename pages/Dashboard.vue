@@ -1,5 +1,5 @@
 <template>
-     <v-card height="100%" class="d-flex">
+     <v-card height="100%" class="d-flex" >
 
     <v-navigation-drawer
       permanent
