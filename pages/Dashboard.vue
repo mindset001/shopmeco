@@ -11,7 +11,7 @@
       <template v-slot:prepend>
         <v-list-item two-line>
           <v-list-item-avatar>
-            <img src="https://randomuser.me/api/portraits/women/81.jpg">
+            <img src="https://res.cloudinary.com/mindset/image/upload/v1643103374/e251731f-1bf1-4414-8338-1508dd237907_iznfnc.jpg">
           </v-list-item-avatar>
 
           <v-list-item-content>
@@ -71,7 +71,7 @@
           { title: 'Support', icon: 'mdi-account-group-outline',link: '/Dashboard/Support' },
 
         ],
-         mini: true,
+         mini: false,
          detail: JSON.parse(localStorage.getItem('detail'))
         
       }

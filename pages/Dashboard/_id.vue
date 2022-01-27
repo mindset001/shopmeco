@@ -13,13 +13,13 @@
         color="transparent"
       >
         <template v-slot:badge>
-          <v-btn color="success" fab >
+          <v-btn color="amber" fab >
           <v-icon>mdi-plus</v-icon>
           </v-btn>
         </template>
 
         <v-avatar size="200">
-          <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+          <v-img src="https://res.cloudinary.com/mindset/image/upload/v1643103374/e251731f-1bf1-4414-8338-1508dd237907_iznfnc.jpg"></v-img>
         </v-avatar>
       </v-badge>
                          </div>
@@ -68,7 +68,7 @@
       </v-row>
     </v-container>
 
-      <v-btn color="success" class="text-center" to="/signup" nuxt>Become A Service provider</v-btn>
+      <v-btn color="amber" class="text-center primary--text" to="/signup" nuxt>Become A Service provider</v-btn>
 
    
                         
@@ -135,14 +135,14 @@ South City 1, Sector 41, HAryana 122001</p>
           cols="12"
           md="6"
         >
-         <v-btn color="success">Make Payment</v-btn>
+         <v-btn color="amber" class="primary--text">Make Payment</v-btn>
         </v-col>
 
         <v-col
           cols="12"
           md="6"
         >
-         <v-btn color="success">Chat</v-btn>
+         <v-btn color="amber" class="primary--text">Chat</v-btn>
         </v-col>
 
         

@@ -15,7 +15,7 @@
         <v-btn to="/signup" nuxt dark color="red" ><VIcon>mdi-sign-up</VIcon>
         Partner Now</v-btn>
             
-            <v-btn color="success">
+            <v-btn to="/usersignup" color="success">
             <VIcon>mdi-connectwithoutcontact</VIcon>
             connect with us</v-btn>
         </div>
