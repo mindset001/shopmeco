@@ -29,7 +29,7 @@
         
       
     </v-container>
-     <v-btn color="success" @click="submitForm">submit</v-btn>
+     <v-btn color="success" @click="submitForm" class="ml-6">submit</v-btn>
         
     </v-form>
 </template>
@@ -54,19 +54,29 @@
 
     methods: {
         submitForm(){
-            if(this.password == this.confirmPassword){
-                let validate =   this.$refs.shakur.validate()
-          if(validate){
-              console.log('anything')
+           
+              // console.log('anything')
+              const data = {
+                email: this.email,
+                password: this.password
+              }
+              this.$axios.$post('https://shopmeco-server.herokuapp.com/api/user/login', data).then(res => {
+            
+            const token = res
+             localStorage.setItem('token', JSON.stringify(token))
+             this.$router.push('/Dashboard')
+            console.log(res);
+          })
           }
-            }else{
-             this.confirmPasswordRules == 'password does not match'
-          }
+            }
+
+
+            
           
-        },
+        }
         
 
-    }
     
-  }
+    
+  
 </script>

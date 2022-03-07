@@ -14,7 +14,7 @@
            </v-img>
         
         </v-flex>
-        <v-divider vertical color="amber" width="200px"></v-divider>
+        <v-divider vertical color="amber" width=""></v-divider>
         <v-flex md4 class="mx-10">
         <h1>Locate Us At</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -23,7 +23,7 @@
         <v-img  :src= "require('@/assets/map.png')" height="450px" contain>
            </v-img>
         </v-flex>
-            <v-divider vertical width="200px"></v-divider>
+            <v-divider vertical width=""></v-divider>
         <v-flex md3 class="mx-5">
             <div>
         <h1>What People Say About Us</h1>

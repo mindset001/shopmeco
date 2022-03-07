@@ -17,7 +17,7 @@
             
             <v-btn to="/usersignup" color="success">
             <VIcon>mdi-connectwithoutcontact</VIcon>
-            connect with us</v-btn>
+            SignUp</v-btn>
         </div>
         </v-card>
        

@@ -5,10 +5,10 @@
        
         <v-img :src="require('@/assets/logo.png')" width="0px"></v-img>
         <div class="hidden-xs-only ">
-        <v-btn  to=""  text color="white">Home</v-btn>
-        <v-btn to=""  text color="white">About Us</v-btn>
-        <v-btn to=""  text color="white">Services</v-btn>
-        <v-btn to=""  text color="white">Contact</v-btn>
+        <v-btn  to="/"  text color="white">Home</v-btn>
+        <v-btn to="/about"  text color="white">About Us</v-btn>
+        <v-btn to="/services"  text color="white">Services</v-btn>
+        <v-btn to="/contact"  text color="white">Contact</v-btn>
        </div>
        
        <v-spacer></v-spacer> 
@@ -34,32 +34,32 @@
         <v-list>
           <v-list-item>
           <v-list-container>
-          <v-btn  to=""  text >Home</v-btn>
+          <v-btn  to="/"  text >Home</v-btn>
        
           </v-list-container>
           </v-list-item>
           <v-list-item>
           <v-list-container>
-          <v-btn  to=""  text >Services</v-btn>
+          <v-btn  to="/services"  text >Services</v-btn>
        
           </v-list-container>
           </v-list-item>
           <v-list-item>
           <v-list-container>
-          <v-btn  to=""  text >About US</v-btn>
+          <v-btn  to="/about"  text >About US</v-btn>
        
           </v-list-container>
           </v-list-item>
           <v-list-item>
           <v-list-container>
-          <v-btn  to=""  text >Contact</v-btn>
+          <v-btn  to="/contact"  text >Contact</v-btn>
        
           </v-list-container>
           </v-list-item>
 
           <v-list-item>
           <v-list-container>
-          <v-btn color="success">
+          <v-btn color="success"  @click="draw=!draw">
         
         <VIcon left>mdi-login</VIcon>
         Login

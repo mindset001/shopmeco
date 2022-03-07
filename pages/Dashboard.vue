@@ -6,6 +6,7 @@
       left
       dark
       :mini-variant="mini"
+      
     
     >
       <template v-slot:prepend>
