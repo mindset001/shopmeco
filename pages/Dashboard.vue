@@ -6,7 +6,7 @@
       left
       dark
       :mini-variant="mini"
-      
+      class="hidden-xs-only"      
     
     >
       <template v-slot:prepend>
@@ -72,10 +72,12 @@
           { title: 'Support', icon: 'mdi-account-group-outline',link: '/Dashboard/Support' },
 
         ],
+        mobile: true,
          mini: false,
          detail: JSON.parse(localStorage.getItem('detail'))
         
       }
     },
+      
   }
 </script>
