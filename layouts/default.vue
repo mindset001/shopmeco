@@ -30,11 +30,11 @@
 
           <v-app-bar-nav-icon dark class="hidden-md-and-up" @click="drawer=!drawer" ></v-app-bar-nav-icon>
       </v-app-bar>
-      <v-navigation-drawer clipped v-model="drawer" app draggable disable-resize-watcher>
-        <v-list>
+      <v-navigation-drawer :dark="$route.path.toLowerCase().includes('dashboard')  ? true:false" clipped v-model="drawer" app draggable disable-resize-watcher>
+        <v-list v-if="!$route.path.toLowerCase().includes('dashboard') ">
           <v-list-item>
           <v-list-container>
-          <v-btn  to="/"  text >Home</v-btn>
+          <v-btn  to="/"   text >Home</v-btn>
        
           </v-list-container>
           </v-list-item>
@@ -69,6 +69,47 @@
           </v-list-container>
           </v-list-item>
         </v-list>
+
+
+
+
+
+
+         <v-list v-else>
+           <v-list-item>
+          <v-list-container>
+          <v-btn  to="/"  text >Home</v-btn>
+       
+          </v-list-container>
+          </v-list-item>
+
+          <v-list-item>
+          <v-list-container>
+          <v-btn  to="/Dashboard" exact  text >Profile</v-btn>
+       
+          </v-list-container>
+          </v-list-item>
+
+          <v-list-item>
+          <v-list-container>
+          <v-btn  to="/Dashboard/Request service"  text >Request Services</v-btn>
+       
+          </v-list-container>
+          </v-list-item>
+
+          <v-list-item>
+          <v-list-container>
+          <v-btn  to="/Dashboard/Support"  text >Support</v-btn>
+       
+          </v-list-container>
+          </v-list-item>
+        
+        </v-list>
+
+
+
+
+
       </v-navigation-drawer>
 
       <v-navigation-drawer v-model="draw" app draggable disable-resize-watcher right dark temporary >
@@ -150,6 +191,9 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js'
     }
+  },
+  mounted() {
+    console.log(this.$route.path, 'path')
   }
 }
 </script>

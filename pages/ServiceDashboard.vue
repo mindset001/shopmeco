@@ -9,6 +9,7 @@
       class="hidden-xs-only" 
     
     >
+    
       <template v-slot:prepend>
         <v-list-item two-line>
           <v-list-item-avatar>

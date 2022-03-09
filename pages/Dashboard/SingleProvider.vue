@@ -14,7 +14,7 @@
            </v-img>
         
         </v-flex>
-        <v-divider vertical color="amber" width=""></v-divider>
+        <v-divider vertical color="amber" width="" class="hidden-xs-only" ></v-divider >
         <v-flex md4 class="mx-10">
         <h1>Locate Us At</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
